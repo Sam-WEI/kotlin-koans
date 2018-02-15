@@ -1,9 +1,15 @@
 package iv_properties
 
 import util.TODO
-
+// important
 class LazyProperty(val initializer: () -> Int) {
-    val lazy: Int = todoTask33()
+    var _lazy: Int? = null
+        get() {
+            if (field == null) field = initializer()
+            return field
+        }
+    val lazy: Int
+        get() = _lazy!!
 }
 
 fun todoTask33(): Nothing = TODO(
