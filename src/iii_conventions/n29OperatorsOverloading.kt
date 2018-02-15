@@ -3,6 +3,7 @@ package iii_conventions
 import util.TODO
 import iii_conventions.TimeInterval.*
 
+// important
 fun todoTask29(): Nothing = TODO(
     """
         Task 29.
@@ -20,12 +21,10 @@ fun todoTask29(): Nothing = TODO(
     })
 
 fun task29_1(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR + WEEK
+    return today + YEAR + WEEK
 }
 
 fun task29_2(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR * 2 + WEEK * 3 + DAY * 5
+    return today + YEAR * 2 + WEEK * 3 + DAY * 5
 }
 
