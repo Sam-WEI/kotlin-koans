@@ -34,7 +34,19 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            todoTask39()
+            for ((index, prod) in products.withIndex()) {
+                tr {
+                    td(getCellColor(index, 0)) {
+                        text(prod.description)
+                    }
+                    td(getCellColor(index, 1)) {
+                        text(prod.price)
+                    }
+                    td(getCellColor(index, 2)) {
+                        text(prod.popularity)
+                    }
+                }
+            }
         }
     }.toString()
 }
